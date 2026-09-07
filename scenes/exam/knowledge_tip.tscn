@@ -1,0 +1,52 @@
+﻿[gd_scene load_steps=3 format=3 uid="uid://knowledge_tip_main"]
+
+[ext_resource type="Script" path="res://scripts/exam/knowledge_tip.gd" id="1_blqkd"]
+[ext_resource type="Theme" path="res://data/PVZ_theme.tres" id="2_ecotp"]
+
+[node name="KnowledgeTip" type="Control"]
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+mouse_filter = 2
+theme = ExtResource("2_ecotp")
+script = ExtResource("1_blqkd")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_type_variation = &"PanelDialogBG"
+
+[node name="LabelName" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 290.0
+offset_bottom = 25.0
+text = "植物名称"
+theme_type_variation = &"LabelSmall"
+
+[node name="LabelModule" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 28.0
+offset_right = 290.0
+offset_bottom = 45.0
+text = "第X章"
+theme_type_variation = &"LabelSmall"
+
+[node name="LabelKnowledge" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 48.0
+offset_right = 290.0
+offset_bottom = 65.0
+text = "考点名称"
+autowrap_mode = 2
+theme_type_variation = &"LabelSmall"

@@ -143,6 +143,34 @@ func start_quiz(module_id: int = 1, difficulty: int = -1, count: int = 1) -> voi
 	trigger_quiz.emit(module_id, difficulty)
 
 
+## 根据场上植物关联出题（优先使用场上植物的考点）
+func start_plant_quiz(count: int = 1, difficulty: int = -1) -> void:
+	## 使用 PlantKnowledgeBinder 获取场上植物的题目
+	var field_questions = PlantKnowledgeBinder.get_questions_for_field_plants(count)
+	if field_questions.is_empty():
+		## 没有匹配的题目，回退到随机模块出题
+		var module_id = randi() % 6 + 1
+		start_quiz(module_id, difficulty, count)
+		return
+
+	session_correct = 0
+	session_total = 0
+	session_module = 0
+	session_wrong_ids.clear()
+	is_quiz_active = true
+
+	current_question = field_questions[0]
+	trigger_quiz.emit(0, difficulty)
+
+
+## 根据考点 ID 列表过滤题目
+func get_questions_by_knowledge_ids(knowledge_ids: Array) -> Array:
+	return _questions_list.filter(func(q):
+		var kid = q.get("knowledge_id", "")
+		return kid in knowledge_ids
+	)
+
+
 ## 获取下一题
 func next_question(module_id: int = -1, difficulty: int = -1) -> Dictionary:
 	if module_id <= 0:
@@ -189,6 +217,11 @@ func get_plant_info(plant_id: String) -> Dictionary:
 	return {}
 
 
+## 获取完整题库列表
+func get_all_questions() -> Array:
+	return _questions_list.duplicate()
+
+
 ## 获取错题列表
 func get_wrong_questions() -> Array:
 	var result: Array = []
@@ -198,3 +231,4 @@ func get_wrong_questions() -> Array:
 				result.append(q)
 				break
 	return result
+

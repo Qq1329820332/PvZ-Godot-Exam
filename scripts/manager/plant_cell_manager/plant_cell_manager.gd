@@ -1,4 +1,4 @@
-extends MainGameSubManager
+﻿extends MainGameSubManager
 class_name PlantCellManager
 
 @onready var plant_cells_root: Node2D = %PlantCellsRoot
@@ -55,11 +55,15 @@ func _ready() -> void:
 func update_plant_info_create(_plant_cell:PlantCell, plant_type:CharacterRegistry.PlantType):
 	curr_plant_num[plant_type] = curr_plant_num.get(plant_type, 0) + 1
 	EventBus.push_event("update_card_purple_sun_cost")
+	## 通知植物考点绑定系统
+	EventBus.push_event("plant_placed", [plant_type, _plant_cell.row_col.x, _plant_cell.row_col.y])
 
 ## 更新植物信息(植物死亡)
 func update_plant_info_free(_plant_cell:PlantCell, plant_type:CharacterRegistry.PlantType):
 	curr_plant_num[plant_type] -= 1
 	EventBus.push_event("update_card_purple_sun_cost")
+	## 通知植物考点绑定系统
+	EventBus.push_event("plant_removed", [plant_type, _plant_cell.row_col.x, _plant_cell.row_col.y])
 	if curr_plant_num[plant_type] < 0:
 		printerr(plant_type, ":该植物类型数量小于0")
 #endregion
@@ -537,3 +541,4 @@ func load_game_data_plant_cell_manager(save_game_data_plant_cell_manager:Resourc
 	tomb_stone_manager.load_game_data_tomb_stone_manager(save_game_data_plant_cell_manager.tomb_stone_manager_data )
 
 #endregion
+

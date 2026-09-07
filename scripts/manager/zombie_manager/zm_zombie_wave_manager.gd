@@ -135,7 +135,7 @@ func start_next_wave() -> void:
 	## 旗帜波和最后一波触发答题
 	if curr_wave_type == E_WaveType.Flag or curr_wave_type == E_WaveType.Final:
 		var module = (curr_wave / 10) % 6 + 1
-		ExamManager.start_quiz(module, -1, 1)
+		ExamManager.start_plant_quiz(1, -1)
 
 
 func call_tombstone_create_zombie():
@@ -159,3 +159,4 @@ func update_progress_bar_segment_mini_every_sec(time:float):
 func _on_every_wave_progress_timer_timeout() -> void:
 	# 每秒进度条增加对应的进度值
 	flag_progress_bar.set_progress_add_every_sec(progress_bar_segment_mini_every_sec)
+

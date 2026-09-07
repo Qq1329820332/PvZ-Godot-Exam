@@ -90,6 +90,8 @@ var bgm_main_game: AudioStream
 
 ## 答题面板场景
 const EXAM_PANEL_SCENE: PackedScene = preload("res://scenes/exam/exam_panel.tscn")
+## 知识提示场景
+const KNOWLEDGE_TIP_SCENE: PackedScene = preload("res://scenes/exam/knowledge_tip.tscn")
 #endregion
 
 
@@ -227,6 +229,9 @@ func event_bus_subscribe():
 	EventBus.subscribe("start_next_round_game", start_next_round_game)
 	## 更新阳光收集位置
 	EventBus.subscribe("update_marker_2d_sun_target", update_marker_2d_sun_target)
+		## 植物放置/移除事件（考点绑定）
+		EventBus.subscribe("plant_placed", _on_plant_placed_event)
+		EventBus.subscribe("plant_removed", _on_plant_removed_event)
 
 
 ## 订阅答题事件
@@ -606,3 +611,5 @@ func update_level_state_data_multi_round_data(is_have_multi_round_data:=true):
 	Global.global_game_state.curr_all_level_state_data[game_para.save_game_name] = curr_level_state_data
 	Global.save_service.save_now()
 #endregion
+
+

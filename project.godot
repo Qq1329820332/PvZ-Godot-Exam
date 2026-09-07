@@ -29,7 +29,7 @@ AllCards="*res://scenes/autoload/all_cards.tscn"
 GlobalUtils="*res://scripts/autoload/util/global_utils.gd"
 EventBus="*res://scripts/autoload/event_bus.gd"
 TreePauseManager="*res://scripts/autoload/tree_pause_manager.gd"
-ExamManager="*res://scripts/exam/exam_manager.gd"
+ExamManager="*res://scripts/exam/exam_manager.gd"`r`nPlantKnowledgeBinder="*res://scripts/exam/plant_knowledge_binder.gd"
 
 [display]
 
@@ -133,3 +133,4 @@ test1={
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+
