@@ -1,0 +1,184 @@
+﻿[gd_scene load_steps=3 format=3 uid=&quot;uid://exam_panel_main&quot;]
+
+[ext_resource type=&quot;Script&quot; path=&quot;res://scripts/exam/exam_panel.gd&quot; id=&quot;1_8vgqd&quot;]
+[ext_resource type=&quot;Theme&quot; path=&quot;res://data/PVZ_theme.tres&quot; id=&quot;2_ecotp&quot;]
+
+[node name=&quot;ExamPanel&quot; type=&quot;Control&quot;]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource(&quot;2_ecotp&quot;)
+mouse_filter = 2
+script = ExtResource(&quot;1_8vgqd&quot;)
+
+[node name=&quot;PanelQuestion&quot; type=&quot;Panel&quot; parent=&quot;.&quot;]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 720.0
+offset_bottom = 200.0
+theme_type_variation = &amp;&quot;PanelDialogBG&quot;
+
+[node name=&quot;LabelModule&quot; type=&quot;Label&quot; parent=&quot;PanelQuestion&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 600.0
+offset_bottom = 35.0
+text = &quot;第1章: 函数、极限和连续&quot;
+theme_type_variation = &amp;&quot;LabelSmall&quot;
+
+[node name=&quot;LabelScore&quot; type=&quot;Label&quot; parent=&quot;PanelQuestion&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 540.0
+offset_top = 10.0
+offset_right = 620.0
+offset_bottom = 35.0
+text = &quot;得分: 0/0&quot;
+horizontal_alignment = 2
+theme_type_variation = &amp;&quot;LabelSmall&quot;
+
+[node name=&quot;LabelQuestion&quot; type=&quot;Label&quot; parent=&quot;PanelQuestion&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 40.0
+offset_right = 620.0
+offset_bottom = 150.0
+text = &quot;题目加载中...&quot;
+autowrap_mode = 2
+theme_type_variation = &amp;&quot;LabelMedium&quot;
+
+[node name=&quot;BtnA&quot; type=&quot;BaseButton&quot; parent=&quot;.&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 80.0
+offset_top = 220.0
+offset_right = 400.0
+offset_bottom = 260.0
+theme_type_variation = &amp;&quot;ButtonOptionBG&quot;
+script = ExtResource(&quot;1_8vgqd&quot;)
+
+[node name=&quot;Label&quot; type=&quot;Label&quot; parent=&quot;BtnA&quot;]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = &quot;A. 选项A&quot;
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_type_variation = &amp;&quot;LabelSmall&quot;
+
+[node name=&quot;BtnB&quot; type=&quot;BaseButton&quot; parent=&quot;.&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 420.0
+offset_top = 220.0
+offset_right = 740.0
+offset_bottom = 260.0
+theme_type_variation = &amp;&quot;ButtonOptionBG&quot;
+script = ExtResource(&quot;1_8vgqd&quot;)
+
+[node name=&quot;Label&quot; type=&quot;Label&quot; parent=&quot;BtnB&quot;]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = &quot;B. 选项B&quot;
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_type_variation = &amp;&quot;LabelSmall&quot;
+
+[node name=&quot;BtnC&quot; type=&quot;BaseButton&quot; parent=&quot;.&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 80.0
+offset_top = 270.0
+offset_right = 400.0
+offset_bottom = 310.0
+theme_type_variation = &amp;&quot;ButtonOptionBG&quot;
+script = ExtResource(&quot;1_8vgqd&quot;)
+
+[node name=&quot;Label&quot; type=&quot;Label&quot; parent=&quot;BtnC&quot;]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = &quot;C. 选项C&quot;
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_type_variation = &amp;&quot;LabelSmall&quot;
+
+[node name=&quot;BtnD&quot; type=&quot;BaseButton&quot; parent=&quot;.&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 420.0
+offset_top = 270.0
+offset_right = 740.0
+offset_bottom = 310.0
+theme_type_variation = &amp;&quot;ButtonOptionBG&quot;
+script = ExtResource(&quot;1_8vgqd&quot;)
+
+[node name=&quot;Label&quot; type=&quot;Label&quot; parent=&quot;BtnD&quot;]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = &quot;D. 选项D&quot;
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_type_variation = &amp;&quot;LabelSmall&quot;
+
+[node name=&quot;PanelFeedback&quot; type=&quot;Panel&quot; parent=&quot;.&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 80.0
+offset_top = 330.0
+offset_right = 740.0
+offset_bottom = 500.0
+theme_type_variation = &amp;&quot;PanelDialogBG&quot;
+
+[node name=&quot;LabelExplanation&quot; type=&quot;Label&quot; parent=&quot;PanelFeedback&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 640.0
+offset_bottom = 80.0
+text = &quot;解析: &quot;
+autowrap_mode = 2
+theme_type_variation = &amp;&quot;LabelSmall&quot;
+
+[node name=&quot;LabelKnowledge&quot; type=&quot;Label&quot; parent=&quot;PanelFeedback&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 640.0
+offset_bottom = 155.0
+text = &quot;&quot;
+autowrap_mode = 2
+
+[node name=&quot;BtnContinue&quot; type=&quot;BaseButton&quot; parent=&quot;.&quot;]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 320.0
+offset_top = 520.0
+offset_right = 480.0
+offset_bottom = 560.0
+
+[node name=&quot;Label&quot; type=&quot;Label&quot; parent=&quot;BtnContinue&quot;]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = &quot;继续战斗 &gt;&quot;
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name=&quot;TimerAutoClose&quot; type=&quot;Timer&quot; parent=&quot;.&quot;]
+unique_name_in_owner = true
+one_shot = true

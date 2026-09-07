@@ -1,10 +1,11 @@
-extends Node
+﻿extends Node
 
 ## 游戏暂停因素
 enum E_PauseFactor {
 	Menu,			## 菜单
 	GameOver,		## 游戏结束
 	ReChooseCard,	## 重新选卡
+	Quiz,			## 答题
 }
 
 var curr_pause_factor: Dictionary = {}

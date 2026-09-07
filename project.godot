@@ -1,4 +1,4 @@
-; Engine configuration file.
+﻿; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
 ;
@@ -29,6 +29,7 @@ AllCards="*res://scenes/autoload/all_cards.tscn"
 GlobalUtils="*res://scripts/autoload/util/global_utils.gd"
 EventBus="*res://scripts/autoload/event_bus.gd"
 TreePauseManager="*res://scripts/autoload/tree_pause_manager.gd"
+ExamManager="*res://scripts/exam/exam_manager.gd"
 
 [display]
 

@@ -1,4 +1,4 @@
-extends Node2D
+﻿extends Node2D
 class_name MainGameManager
 
 #region 游戏测试
@@ -87,6 +87,9 @@ var is_mouse_visibel_on_hammer:bool = false
 var bgm_choose_card: AudioStream = preload("res://assets/audio/BGM/choose_card.mp3")
 ## 主游戏bgm
 var bgm_main_game: AudioStream
+
+## 答题面板场景
+const EXAM_PANEL_SCENE: PackedScene = preload("res://scenes/exam/exam_panel.tscn")
 #endregion
 
 
@@ -224,6 +227,10 @@ func event_bus_subscribe():
 	EventBus.subscribe("start_next_round_game", start_next_round_game)
 	## 更新阳光收集位置
 	EventBus.subscribe("update_marker_2d_sun_target", update_marker_2d_sun_target)
+
+
+## 订阅答题事件
+ExamManager.trigger_quiz.connect(_on_trigger_quiz)
 
 
 ## 更新阳光收集位置
@@ -378,6 +385,32 @@ func main_game_start():
 
 	zombie_manager.start_game()
 
+
+#region 答题系统
+## 答题面板实例
+var _exam_panel: ExamPanel = null
+
+## 答题触发
+func _on_trigger_quiz(module_id: int, difficulty: int) -> void:
+	if _exam_panel != null and is_instance_valid(_exam_panel):
+		return
+	## 暂停游戏
+	TreePauseManager.start_tree_pause(TreePauseManager.E_PauseFactor.Quiz)
+	\t## 创建答题面板
+	_exam_panel = EXAM_PANEL_SCENE.instantiate()
+	canvas_layer_ui.add_child(_exam_panel)
+	_exam_panel.panel_closed.connect(_on_exam_panel_closed)
+	_exam_panel.show_quiz(module_id, difficulty, 1)
+
+
+## 答题面板关闭
+func _on_exam_panel_closed() -> void:
+	if _exam_panel != null and is_instance_valid(_exam_panel):
+		_exam_panel.queue_free()
+	_exam_panel = null
+	## 恢复游戏
+	TreePauseManager.end_tree_pause(TreePauseManager.E_PauseFactor.Quiz)
+#endregion
 
 #region 游戏结束
 ## 修改僵尸位置

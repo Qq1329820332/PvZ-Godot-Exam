@@ -1,4 +1,4 @@
-extends Node
+﻿extends Node
 ## 僵尸波次管理器
 class_name ZombieWaveManager
 
@@ -132,6 +132,11 @@ func start_next_wave() -> void:
 	zombie_wave_refresh_manager.update_wave_health_data(wave_all_hp, curr_wave_type, curr_wave)
 
 	signal_wave_refresh.emit(curr_wave == max_wave - 1)
+	## 旗帜波和最后一波触发答题
+	if curr_wave_type == E_WaveType.Flag or curr_wave_type == E_WaveType.Final:
+		var module = (curr_wave / 10) % 6 + 1
+		ExamManager.start_quiz(module, -1, 1)
+
 
 func call_tombstone_create_zombie():
 	EventBus.push_event("create_tombstone", [randi()%3+1])

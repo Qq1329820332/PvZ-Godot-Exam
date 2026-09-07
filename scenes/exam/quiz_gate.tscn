@@ -1,0 +1,33 @@
+﻿[gd_scene load_steps=3 format=3 uid="uid://quiz_gate_main"]
+
+[ext_resource type="Script" path="res://scripts/exam/quiz_gate.gd" id="1_7qgkd"]
+[ext_resource type="Theme" path="res://data/PVZ_theme.tres" id="2_ecotp"]
+
+[node name="QuizGate" type="Node2D"]
+script = ExtResource("1_7qgkd")
+
+[node name="SpriteGate" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 0)
+scale = Vector2(1, 1.5)
+
+[node name="LabelGate" type="Label" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -10)
+theme = ExtResource("2_ecotp")
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_type_variation = &"LabelSmall"
+text = "答题"
+
+[node name="AreaGate" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaGate"]
+shape = SubResource("rect_shape")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+
+[sub_resource type="RectangleShape2D" id="rect_shape"]
+size = Vector2(64, 96)
