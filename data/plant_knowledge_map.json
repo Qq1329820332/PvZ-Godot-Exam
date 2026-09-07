@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2026-09-07",
+    "note": "植物与考点的映射关系，用于游戏内知识展示和答题门系统"
+  },
+  "plants": [
+    {
+      "id": "plant_limit_pea",
+      "name": "极限射手",
+      "module": 1,
+      "primary_knowledge": "M1_K14",
+      "secondary_knowledge": [
+        "M1_K11",
+        "M1_K13",
+        "M1_K15",
+        "M1_K18",
+        "M1_K22"
+      ],
+      "unlock_level": "1-2",
+      "category": "attacker",
+      "skill_description": "每次射击触发极限计算，攻击力=极限值",
+      "gameplay": "远程单体攻击，随着关卡推进（极限值增大）伤害提升"
+    },
+    {
+      "id": "plant_continuity_tree",
+      "name": "连续树",
+      "module": 1,
+      "primary_knowledge": "M1_K19",
+      "secondary_knowledge": [
+        "M1_K20",
+        "M1_K21"
+      ],
+      "unlock_level": "1-4",
+      "category": "defender",
+      "skill_description": "只要函数连续，每秒恢复生命值",
+      "gameplay": "防御型植物，持续回血，被攻击时触发间断点判断"
+    },
+    {
+      "id": "plant_derivative_shooter",
+      "name": "导数射手",
+      "module": 2,
+      "primary_knowledge": "M2_K01",
+      "secondary_knowledge": [
+        "M2_K04",
+        "M2_K05",
+        "M2_K10",
+        "M2_K13",
+        "M2_K15"
+      ],
+      "unlock_level": "2-1",
+      "category": "attacker",
+      "skill_description": "子弹速度=导数增速，f'(x)>0时子弹加速",
+      "gameplay": "远程攻击，随关卡（导数阶数）增加射速提高"
+    },
+    {
+      "id": "plant_chain_vine",
+      "name": "链式法则藤",
+      "module": 2,
+      "primary_knowledge": "M2_K06",
+      "secondary_knowledge": [
+        "M1_K08",
+        "M2_K09",
+        "M5_K05"
+      ],
+      "unlock_level": "2-3",
+      "category": "support",
+      "skill_description": "从外往里层层攻击，每层叠加伤害",
+      "gameplay": "可缠绕多个僵尸，造成链式叠加伤害"
+    },
+    {
+      "id": "plant_implicit_mushroom",
+      "name": "隐函数菇",
+      "module": 2,
+      "primary_knowledge": "M2_K07",
+      "secondary_knowledge": [
+        "M2_K08",
+        "M5_K06"
+      ],
+      "unlock_level": "2-5",
+      "category": "special",
+      "skill_description": "隐藏在地下，僵尸靠近时触发隐藏伤害",
+      "gameplay": "夜间种植，隐藏攻击，触发时加倍伤害"
+    },
+    {
+      "id": "plant_integral_mushroom",
+      "name": "积分菇",
+      "module": 3,
+      "primary_knowledge": "M3_K01",
+      "secondary_knowledge": [
+        "M3_K02",
+        "M3_K06",
+        "M3_K07",
+        "M3_K08",
+        "M3_K11",
+        "M3_K12"
+      ],
+      "unlock_level": "3-1",
+      "category": "aoe",
+      "skill_description": "范围伤害=积分面积，积分区间越长伤害越大",
+      "gameplay": "夜间范围攻击，覆盖区域=积分区间"
+    },
+    {
+      "id": "plant_substitution_flower",
+      "name": "换元花",
+      "module": 3,
+      "primary_knowledge": "M3_K03",
+      "secondary_knowledge": [
+        "M3_K04",
+        "M3_K09"
+      ],
+      "unlock_level": "3-3",
+      "category": "support",
+      "skill_description": "将僵尸替换位置（换元），改变攻击路线",
+      "gameplay": "辅助型，可把僵尸换位或改变子弹轨迹"
+    },
+    {
+      "id": "plant_integral_lotus",
+      "name": "分部积分莲",
+      "module": 3,
+      "primary_knowledge": "M3_K05",
+      "secondary_knowledge": [
+        "M3_K10"
+      ],
+      "unlock_level": "3-4",
+      "category": "attacker",
+      "skill_description": "每次攻击附加额外伤害=uv-∫vdu",
+      "gameplay": "水系植物，攻击一次后附加二次伤害"
+    },
+    {
+      "id": "plant_ode_grass",
+      "name": "通解草",
+      "module": 4,
+      "primary_knowledge": "M4_K04",
+      "secondary_knowledge": [
+        "M4_K01",
+        "M4_K02",
+        "M4_K03"
+      ],
+      "unlock_level": "4-1",
+      "category": "healer",
+      "skill_description": "持续回血=微分方程通解，含C个独立恢复源",
+      "gameplay": "持续群体治疗，治疗量=通解公式精度"
+    },
+    {
+      "id": "plant_characteristic_tree",
+      "name": "特征根树",
+      "module": 4,
+      "primary_knowledge": "M4_K06",
+      "secondary_knowledge": [
+        "M4_K05"
+      ],
+      "unlock_level": "4-3",
+      "category": "defender",
+      "skill_description": "根据特征根Δ判定防御形态：Δ>0双根双防",
+      "gameplay": "根据Δ值切换3种防御形态"
+    },
+    {
+      "id": "plant_partial_shooter",
+      "name": "偏导射手",
+      "module": 5,
+      "primary_knowledge": "M5_K02",
+      "secondary_knowledge": [
+        "M5_K01",
+        "M5_K03",
+        "M5_K07"
+      ],
+      "unlock_level": "5-1",
+      "category": "attacker",
+      "skill_description": "多方向攻击=偏导数，对x固定y方向各射一弹",
+      "gameplay": "可同时攻击多行，每行伤害=偏导值"
+    },
+    {
+      "id": "plant_total_diff_fruit",
+      "name": "全微分果",
+      "module": 5,
+      "primary_knowledge": "M5_K04",
+      "secondary_knowledge": [],
+      "unlock_level": "5-2",
+      "category": "buff",
+      "skill_description": "dz=(∂z/∂x)dx+(∂z/∂y)dy，全范围增幅",
+      "gameplay": "全屏增益，同时提升攻击和防御"
+    },
+    {
+      "id": "plant_lagrange_pine",
+      "name": "拉格朗日松",
+      "module": 5,
+      "primary_knowledge": "M5_K08",
+      "secondary_knowledge": [],
+      "unlock_level": "5-5",
+      "category": "special",
+      "skill_description": "L=f+λφ，在约束条件下发挥最大效能",
+      "gameplay": "条件性最强植物，但需要特定阵型配合"
+    },
+    {
+      "id": "plant_double_flower",
+      "name": "二重积分花",
+      "module": 6,
+      "primary_knowledge": "M6_K02",
+      "secondary_knowledge": [
+        "M6_K01",
+        "M6_K03"
+      ],
+      "unlock_level": "6-1",
+      "category": "aoe",
+      "skill_description": "X型先积x后积y，范围攻击覆盖矩形区域",
+      "gameplay": "矩形范围攻击，可切换X/Y型覆盖模式"
+    },
+    {
+      "id": "plant_polar_lotus",
+      "name": "极坐标莲",
+      "module": 6,
+      "primary_knowledge": "M6_K04",
+      "secondary_knowledge": [],
+      "unlock_level": "6-3",
+      "category": "aoe",
+      "skill_description": "x=rcosθ, y=rsinθ，圆形范围攻击",
+      "gameplay": "圆形范围攻击，适合覆盖密集僵尸群"
+    }
+  ]
+}

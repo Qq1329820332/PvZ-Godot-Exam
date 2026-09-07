@@ -1,0 +1,1073 @@
+{
+  "meta": {
+    "exam_name": "江西省2026年普通高等学校专升本考试《高等数学及其应用》",
+    "exam_type": "理工类",
+    "total_score": 150,
+    "exam_duration": 120,
+    "modules_count": 6,
+    "version": "1.0",
+    "last_updated": "2026-09-07",
+    "note": "严格限于江西考纲6模块，不包含向量代数/空间解析几何/无穷级数"
+  },
+  "modules": [
+    {
+      "id": 1,
+      "name": "函数、极限和连续",
+      "short_name": "函数极限连续",
+      "score_range": "约22分",
+      "difficulty": 2,
+      "icon": "limit",
+      "knowledge_points": [
+        {
+          "id": "M1_K01",
+          "name": "函数的概念",
+          "category": "concept",
+          "difficulty": 1,
+          "description": "设D是非空数集，若存在对应法则f，使对D中每个x都有唯一确定的y与之对应，则称f是定义在D上的函数。两要素：定义域和对应法则。",
+          "formula": "y=f(x), x∈D",
+          "keywords": [
+            "函数",
+            "定义域",
+            "值域",
+            "对应法则",
+            "两要素"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_pea_basic"
+        },
+        {
+          "id": "M1_K02",
+          "name": "函数的表示法",
+          "category": "concept",
+          "difficulty": 1,
+          "description": "三种表示法：解析法、图像法、表格法。江西真题偏好解析法，偶尔考给图像判断函数性质。",
+          "formula": "",
+          "keywords": [
+            "解析法",
+            "图像法",
+            "表格法",
+            "分段函数"
+          ],
+          "exam_frequency": "low",
+          "plant_ref": "plant_pea_basic"
+        },
+        {
+          "id": "M1_K03",
+          "name": "函数的单调性",
+          "category": "property",
+          "difficulty": 2,
+          "description": "设f(x)在区间I上有定义，若对I上任意x1<x2，f(x1)<f(x2)则单调递增，f(x1)>f(x2)则单调递减。",
+          "formula": "f(x1)<f(x2) ⇒ 递增",
+          "keywords": [
+            "单调递增",
+            "单调递减",
+            "单调区间"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M1_K04",
+          "name": "函数的奇偶性",
+          "category": "property",
+          "difficulty": 2,
+          "description": "定义域必须关于原点对称。奇函数f(-x)=-f(x)，图像关于原点对称；偶函数f(-x)=f(x)，图像关于y轴对称。",
+          "formula": "奇函数: f(-x)=-f(x)",
+          "keywords": [
+            "奇函数",
+            "偶函数",
+            "原点对称",
+            "y轴对称"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K05",
+          "name": "函数的有界性",
+          "category": "property",
+          "difficulty": 2,
+          "description": "存在M>0使得|f(x)|≤M，则称f(x)有界。有界=既有上界又有下界。",
+          "formula": "|f(x)| ≤ M",
+          "keywords": [
+            "有界",
+            "无界",
+            "上界",
+            "下界"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_integral_mushroom"
+        },
+        {
+          "id": "M1_K06",
+          "name": "函数的周期性",
+          "category": "property",
+          "difficulty": 2,
+          "description": "存在T≠0使f(x+T)=f(x)。最小正周期：sinx/2π, cosx/2π, tanx/π。",
+          "formula": "f(x+T)=f(x)",
+          "keywords": [
+            "周期函数",
+            "最小正周期",
+            "sin",
+            "cos",
+            "tan"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K07",
+          "name": "反函数",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "y=f(x)的反函数x=f⁻¹(y)，定义域值域互换，图像关于y=x对称。严格单调是反函数存在的充分条件。",
+          "formula": "f⁻¹(f(x))=x, f(f⁻¹(x))=x",
+          "keywords": [
+            "反函数",
+            "严格单调",
+            "y=x对称"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_chain_vine"
+        },
+        {
+          "id": "M1_K08",
+          "name": "复合函数",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "y=f(u), u=g(x)复合得y=f(g(x))。拆解从外往里，每层都是基本初等函数。",
+          "formula": "y=f(g(x))",
+          "keywords": [
+            "复合函数",
+            "中间变量",
+            "链式法则"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_chain_vine"
+        },
+        {
+          "id": "M1_K09",
+          "name": "基本初等函数",
+          "category": "concept",
+          "difficulty": 1,
+          "description": "五类：幂函数、指数函数、对数函数、三角函数、反三角函数。",
+          "formula": "",
+          "keywords": [
+            "幂函数",
+            "指数函数",
+            "对数函数",
+            "三角函数",
+            "反三角函数"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_pea_basic"
+        },
+        {
+          "id": "M1_K10",
+          "name": "数列极限",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "n→∞时x_n无限接近常数A，则称A为数列极限。收敛于A，否则发散。",
+          "formula": "lim_{n→∞} x_n = A",
+          "keywords": [
+            "数列极限",
+            "收敛",
+            "发散"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K11",
+          "name": "函数极限",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "x→x₀或x→∞时f(x)无限接近常数A。极限与f(x₀)的值无关，只看趋势。",
+          "formula": "lim_{x→x₀} f(x) = A",
+          "keywords": [
+            "函数极限",
+            "x→x₀",
+            "x→∞"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K12",
+          "name": "左右极限",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "左极限x→x₀⁻，右极限x→x₀⁺。极限存在⇔左右极限都存在且相等。",
+          "formula": "lim_{x→x₀} f(x)=A ⇔ f(x₀⁻)=f(x₀⁺)=A",
+          "keywords": [
+            "左极限",
+            "右极限",
+            "分段函数"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K13",
+          "name": "极限的四则运算法则",
+          "category": "method",
+          "difficulty": 2,
+          "description": "lim f=A, lim g=B，则和差积商可拆。前提：极限存在，分母≠0。",
+          "formula": "lim[f±g]=A±B, lim[f·g]=A·B, lim[f/g]=A/B",
+          "keywords": [
+            "四则运算",
+            "和差",
+            "积商"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K14",
+          "name": "第一个重要极限",
+          "category": "formula",
+          "difficulty": 3,
+          "description": "x→0时sinx/x→1。常用变形：sin(kx)/kx→1, tanx/x→1, (1-cosx)/x²→1/2。",
+          "formula": "lim_{x→0} sinx/x = 1",
+          "keywords": [
+            "重要极限",
+            "sinx/x",
+            "变形"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K15",
+          "name": "第二个重要极限",
+          "category": "formula",
+          "difficulty": 3,
+          "description": "x→∞时(1+1/x)^x→e，或x→0时(1+x)^(1/x)→e。识别：1的∞次方型。",
+          "formula": "lim_{x→∞} (1+1/x)^x = e",
+          "keywords": [
+            "重要极限",
+            "e",
+            "1的∞次方"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K16",
+          "name": "无穷小量与无穷大量",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "无穷小：极限为0。无穷大：极限为∞。互为倒数关系。",
+          "formula": "lim f=0(无穷小); lim f=∞(无穷大)",
+          "keywords": [
+            "无穷小",
+            "无穷大",
+            "倒数关系"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K17",
+          "name": "无穷小的阶",
+          "category": "concept",
+          "difficulty": 3,
+          "description": "高阶(β/α→0)、低阶(β/α→∞)、同阶(β/α→C≠0)、等价(β/α→1)、k阶(β/α^k→C≠0)。",
+          "formula": "高阶: limβ/α=0; 等价: limβ/α=1",
+          "keywords": [
+            "高阶",
+            "低阶",
+            "同阶",
+            "等价无穷小"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K18",
+          "name": "等价无穷小替换",
+          "category": "method",
+          "difficulty": 3,
+          "description": "x→0时：sinx~x, tanx~x, arcsinx~x, 1-cosx~x²/2, ln(1+x)~x, eˣ-1~x, (1+x)^α-1~αx。只能在乘除中用。",
+          "formula": "sinx~x, 1-cosx~x²/2, ln(1+x)~x, eˣ-1~x",
+          "keywords": [
+            "等价无穷小",
+            "替换",
+            "乘除"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M1_K19",
+          "name": "函数的连续性",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "连续条件：f(x₀)有定义、lim f(x)存在、极限值=f(x₀)。初等函数在定义区间内连续。",
+          "formula": "lim_{x→x₀} f(x) = f(x₀)",
+          "keywords": [
+            "连续",
+            "初等函数连续"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_continuity_tree"
+        },
+        {
+          "id": "M1_K20",
+          "name": "函数的间断点",
+          "category": "concept",
+          "difficulty": 3,
+          "description": "第一类（左右极限存在）：可去、跳跃。第二类（至少一个不存在）：无穷、振荡。",
+          "formula": "",
+          "keywords": [
+            "间断点",
+            "第一类",
+            "第二类",
+            "可去",
+            "跳跃"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_continuity_tree"
+        },
+        {
+          "id": "M1_K21",
+          "name": "闭区间上连续函数的性质",
+          "category": "theorem",
+          "difficulty": 3,
+          "description": "最值定理、介值定理、零点定理：f(a)·f(b)<0则存在ξ使f(ξ)=0。",
+          "formula": "f(a)·f(b)<0 ⇒ ∃ξ∈(a,b), f(ξ)=0",
+          "keywords": [
+            "最值定理",
+            "介值定理",
+            "零点定理"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_continuity_tree"
+        },
+        {
+          "id": "M1_K22",
+          "name": "曲线的渐近线",
+          "category": "concept",
+          "difficulty": 3,
+          "description": "水平渐近线：lim_{x→∞}f(x)=A；垂直渐近线：lim_{x→x₀}f(x)=∞",
+          "formula": "水平: lim_{x→∞}f(x)=A; 垂直: lim_{x→x₀}f(x)=∞",
+          "keywords": [
+            "水平渐近线",
+            "垂直渐近线"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_limit_pea"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "一元函数微分学及其应用",
+      "short_name": "一元微分学",
+      "score_range": "约39分",
+      "difficulty": 3,
+      "icon": "derivative",
+      "knowledge_points": [
+        {
+          "id": "M2_K01",
+          "name": "导数的概念与定义",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "f'(x₀)=lim[f(x₀+Δx)-f(x₀)]/Δx。几何意义：切线斜率；物理意义：瞬时速度。",
+          "formula": "f'(x₀)=lim_{Δx→0} [f(x₀+Δx)-f(x₀)]/Δx",
+          "keywords": [
+            "导数定义",
+            "切线斜率",
+            "增量式"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K02",
+          "name": "左右导数与可导性",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "可导⇔左右导数都存在且相等。不可导情况：尖点、垂直切线、不连续点。",
+          "formula": "f'_⁻(x₀)=lim_{Δx→0⁻} Δy/Δx",
+          "keywords": [
+            "左导数",
+            "右导数",
+            "可导",
+            "尖点"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K03",
+          "name": "可导与连续的关系",
+          "category": "theorem",
+          "difficulty": 2,
+          "description": "可导必连续，连续不一定可导。反例：f(x)=|x|在x=0处连续但不可导。",
+          "formula": "可导 ⇒ 连续",
+          "keywords": [
+            "可导",
+            "连续",
+            "尖点"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K04",
+          "name": "基本求导公式",
+          "category": "formula",
+          "difficulty": 1,
+          "description": "常数0；(x^α)'=αx^(α-1)；(a^x)'=a^x ln a；(e^x)'=e^x；(ln x)'=1/x；(sinx)'=cosx；(cosx)'=-sinx；",
+          "formula": "详见基本求导公式表",
+          "keywords": [
+            "求导公式",
+            "幂函数",
+            "指数",
+            "对数",
+            "三角函数"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K05",
+          "name": "求导四则运算法则",
+          "category": "method",
+          "difficulty": 2,
+          "description": "和差：(u±v)'=u'±v'；乘积：(uv)'=u'v+uv'；商：(u/v)'=(u'v-uv')/v²。",
+          "formula": "(uv)'=u'v+uv'; (u/v)'=(u'v-uv')/v²",
+          "keywords": [
+            "四则运算",
+            "乘积法则",
+            "商法则"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K06",
+          "name": "复合函数求导（链式法则）",
+          "category": "method",
+          "difficulty": 3,
+          "description": "y=f(u), u=g(x)，则dy/dx=dy/du·du/dx。从外往里，层层求导，依次相乘。",
+          "formula": "[f(g(x))]' = f'(g(x))·g'(x)",
+          "keywords": [
+            "链式法则",
+            "复合函数",
+            "层层求导"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_chain_vine"
+        },
+        {
+          "id": "M2_K07",
+          "name": "隐函数求导",
+          "category": "method",
+          "difficulty": 3,
+          "description": "F(x,y)=0两边同时对x求导，y看作x的函数，用链式法则，解出y'。",
+          "formula": "F(x,y)=0 ⇒ 两边对x求导 ⇒ 解出y'",
+          "keywords": [
+            "隐函数",
+            "两边求导",
+            "链式法则"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_implicit_mushroom"
+        },
+        {
+          "id": "M2_K08",
+          "name": "对数求导法",
+          "category": "method",
+          "difficulty": 3,
+          "description": "适用于幂指函数y=u^v。两边取对数ln y = v ln u，隐函数求导后解出y'。",
+          "formula": "y=u^v ⇒ ln y = v ln u ⇒ y' = u^v(v' ln u + v·u'/u)",
+          "keywords": [
+            "对数求导",
+            "幂指函数"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_chain_vine"
+        },
+        {
+          "id": "M2_K09",
+          "name": "高阶导数",
+          "category": "method",
+          "difficulty": 3,
+          "description": "二阶导数是导数的导数。常用n阶导数：e^x、sinx、cosx、ln(1+x)等。",
+          "formula": "f''(x)=(f'(x))'",
+          "keywords": [
+            "高阶导数",
+            "二阶导数",
+            "n阶导数"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K10",
+          "name": "函数的微分",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "dy=f'(x₀)dx。可微⇔可导（一元函数）。微分形式不变性。",
+          "formula": "dy = f'(x₀)dx",
+          "keywords": [
+            "微分",
+            "线性近似",
+            "可微"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K11",
+          "name": "切线与法线方程",
+          "category": "method",
+          "difficulty": 2,
+          "description": "切线：y-y₀=f'(x₀)(x-x₀)；法线：y-y₀=-1/f'(x₀)(x-x₀)。",
+          "formula": "切线: y-y₀=f'(x₀)(x-x₀)",
+          "keywords": [
+            "切线方程",
+            "法线方程",
+            "几何意义"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K12",
+          "name": "洛必达法则",
+          "category": "method",
+          "difficulty": 3,
+          "description": "0/0或∞/∞型，lim f/g = lim f'/g'。前提：可导，g'(x)≠0，极限存在。",
+          "formula": "lim f/g = lim f'/g'",
+          "keywords": [
+            "洛必达",
+            "0/0型",
+            "∞/∞型"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_limit_pea"
+        },
+        {
+          "id": "M2_K13",
+          "name": "函数的单调性与极值",
+          "category": "method",
+          "difficulty": 3,
+          "description": "f'(x)>0⇒递增，f'(x)<0⇒递减。极值判定：f'(x₀)=0且左右变号。",
+          "formula": "f'(x)>0 ⇒ 递增",
+          "keywords": [
+            "单调性",
+            "极值",
+            "驻点"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K14",
+          "name": "曲线的凹凸性与拐点",
+          "category": "concept",
+          "difficulty": 3,
+          "description": "f''(x)>0⇒凹，f''(x)<0⇒凸。拐点：f''(x)=0且左右变号。",
+          "formula": "f''(x)>0 ⇒ 凹; f''(x)<0 ⇒ 凸",
+          "keywords": [
+            "凹凸性",
+            "拐点",
+            "二阶导数"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_derivative_shooter"
+        },
+        {
+          "id": "M2_K15",
+          "name": "函数的最值",
+          "category": "method",
+          "difficulty": 3,
+          "description": "求所有极值点+端点，比较函数值。实际问题中唯一极值点即为最值点。",
+          "formula": "",
+          "keywords": [
+            "最大值",
+            "最小值",
+            "端点"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_derivative_shooter"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "一元函数积分学及其应用",
+      "short_name": "一元积分学",
+      "score_range": "约39分",
+      "difficulty": 3,
+      "icon": "integral",
+      "knowledge_points": [
+        {
+          "id": "M3_K01",
+          "name": "原函数与不定积分的概念",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "F'(x)=f(x)则F(x)是原函数。∫f(x)dx=F(x)+C，C为任意常数。",
+          "formula": "∫f(x)dx = F(x) + C",
+          "keywords": [
+            "原函数",
+            "不定积分",
+            "C"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_mushroom"
+        },
+        {
+          "id": "M3_K02",
+          "name": "基本积分公式",
+          "category": "formula",
+          "difficulty": 1,
+          "description": "∫x^α = x^(α+1)/(α+1)+C; ∫1/x = ln|x|+C; ∫e^x = e^x+C; ∫sinx = -cosx+C; ∫cosx = sinx+C; ∫sec²x = tanx+C",
+          "formula": "详见基本积分表",
+          "keywords": [
+            "积分公式",
+            "幂函数",
+            "三角函数"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_mushroom"
+        },
+        {
+          "id": "M3_K03",
+          "name": "第一换元法（凑微分法）",
+          "category": "method",
+          "difficulty": 3,
+          "description": "∫f(φ(x))·φ'(x)dx = ∫f(u)du（令u=φ(x)）。关键是找到φ'(x)凑成du。",
+          "formula": "∫f(φ(x))·φ'(x)dx = ∫f(u)du",
+          "keywords": [
+            "第一换元",
+            "凑微分"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_substitution_flower"
+        },
+        {
+          "id": "M3_K04",
+          "name": "不定积分第二换元法",
+          "category": "method",
+          "difficulty": 4,
+          "description": "令x=ψ(t)，dx=ψ'(t)dt。用于含根号积分：√(a²-x²)设x=asint，√(a²+x²)设x=atant。",
+          "formula": "∫f(x)dx = ∫f(ψ(t))·ψ'(t)dt",
+          "keywords": [
+            "第二换元",
+            "三角代换",
+            "根号"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_substitution_flower"
+        },
+        {
+          "id": "M3_K05",
+          "name": "分部积分法",
+          "category": "method",
+          "difficulty": 3,
+          "description": "∫udv = uv - ∫vdu。选u顺序：反→对→幂→指→三（反对幂指三）。",
+          "formula": "∫udv = uv - ∫vdu",
+          "keywords": [
+            "分部积分",
+            "反对幂指三"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_lotus"
+        },
+        {
+          "id": "M3_K06",
+          "name": "定积分的概念与性质",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "∫_a^b f(x)dx = lim Σf(ξ_i)Δx_i。几何意义：曲边梯形面积（代数和）。",
+          "formula": "∫_a^b f(x)dx = lim Σf(ξ_i)Δx_i",
+          "keywords": [
+            "定积分",
+            "黎曼和",
+            "面积"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_mushroom"
+        },
+        {
+          "id": "M3_K07",
+          "name": "变上限积分函数",
+          "category": "concept",
+          "difficulty": 3,
+          "description": "F(x)=∫_a^x f(t)dt，F'(x)=f(x)。推广：d/dx∫_{ψ}^{φ}f(t)dt = f(φ)φ' - f(ψ)ψ'。",
+          "formula": "d/dx ∫_a^x f(t)dt = f(x)",
+          "keywords": [
+            "变上限积分",
+            "变限求导"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_mushroom"
+        },
+        {
+          "id": "M3_K08",
+          "name": "牛顿-莱布尼茨公式",
+          "category": "theorem",
+          "difficulty": 2,
+          "description": "若F(x)是原函数，则∫_a^b f(x)dx = F(b)-F(a)。微积分基本定理。",
+          "formula": "∫_a^b f(x)dx = F(b) - F(a)",
+          "keywords": [
+            "牛顿-莱布尼茨",
+            "微积分基本定理"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_mushroom"
+        },
+        {
+          "id": "M3_K09",
+          "name": "定积分的换元积分法",
+          "category": "method",
+          "difficulty": 3,
+          "description": "x=φ(t)，∫_a^b f(x)dx = ∫_{α}^{β} f(φ(t))·φ'(t)dt。注意换元必须换限！",
+          "formula": "∫_a^b f(x)dx = ∫_{α}^{β} f(φ(t))·φ'(t)dt",
+          "keywords": [
+            "定积分换元",
+            "换限"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_substitution_flower"
+        },
+        {
+          "id": "M3_K10",
+          "name": "定积分的分部积分法",
+          "category": "method",
+          "difficulty": 3,
+          "description": "∫_a^b udv = [uv]_a^b - ∫_a^b vdu。多了上下限代入项。",
+          "formula": "∫_a^b udv = [uv]_a^b - ∫_a^b vdu",
+          "keywords": [
+            "定积分分部",
+            "上下限"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_lotus"
+        },
+        {
+          "id": "M3_K11",
+          "name": "定积分求平面图形面积",
+          "category": "method",
+          "difficulty": 3,
+          "description": "S=∫|f(x)-g(x)|dx。关键是画图确定积分限和被积函数。",
+          "formula": "S = ∫_a^b |f(x)-g(x)|dx",
+          "keywords": [
+            "面积",
+            "定积分应用"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_mushroom"
+        },
+        {
+          "id": "M3_K12",
+          "name": "旋转体体积",
+          "category": "method",
+          "difficulty": 3,
+          "description": "绕x轴：V=π∫f²(x)dx。绕y轴：V=2π∫xf(x)dx（柱壳法）。",
+          "formula": "V_x = π∫_a^b f²(x)dx",
+          "keywords": [
+            "旋转体",
+            "体积",
+            "柱壳法"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_integral_mushroom"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "常微分方程",
+      "short_name": "微分方程",
+      "score_range": "约12分",
+      "difficulty": 3,
+      "icon": "ode",
+      "knowledge_points": [
+        {
+          "id": "M4_K01",
+          "name": "微分方程的基本概念",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "含有未知函数导数的方程。阶：最高阶导数阶数。通解：含独立常数。特解：常数确定。",
+          "formula": "F(x,y,y',...,y^(n))=0",
+          "keywords": [
+            "微分方程",
+            "阶",
+            "通解",
+            "特解"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_ode_grass"
+        },
+        {
+          "id": "M4_K02",
+          "name": "可分离变量微分方程",
+          "category": "method",
+          "difficulty": 2,
+          "description": "dy/dx = f(x)·g(y)。解法：分离变量→两边积分。",
+          "formula": "dy/dx = f(x)g(y) ⇒ ∫dy/g(y) = ∫f(x)dx",
+          "keywords": [
+            "可分离变量",
+            "分离变量"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_ode_grass"
+        },
+        {
+          "id": "M4_K03",
+          "name": "齐次微分方程",
+          "category": "method",
+          "difficulty": 3,
+          "description": "dy/dx = f(y/x)。令u=y/x，化为可分离变量方程。",
+          "formula": "令 u=y/x ⇒ u+x·du/dx = f(u)",
+          "keywords": [
+            "齐次方程",
+            "代换"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_ode_grass"
+        },
+        {
+          "id": "M4_K04",
+          "name": "一阶线性微分方程",
+          "category": "method",
+          "difficulty": 3,
+          "description": "y'+P(x)y=Q(x)。通解：y=e^{-∫Pdx}[∫Q·e^{∫Pdx}dx + C]。",
+          "formula": "y = e^{-∫Pdx}[∫Q·e^{∫Pdx}dx + C]",
+          "keywords": [
+            "一阶线性",
+            "通解公式"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_ode_grass"
+        },
+        {
+          "id": "M4_K05",
+          "name": "二阶线性微分方程解的结构",
+          "category": "theorem",
+          "difficulty": 3,
+          "description": "齐次通解=C₁y₁+C₂y₂。非齐次通解=齐次通解+非齐次特解。",
+          "formula": "y''+py'+qy=0, 通解=C₁y₁+C₂y₂",
+          "keywords": [
+            "二阶线性",
+            "解的结构"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_characteristic_tree"
+        },
+        {
+          "id": "M4_K06",
+          "name": "二阶常系数齐次线性微分方程",
+          "category": "method",
+          "difficulty": 3,
+          "description": "特征方程r²+pr+q=0。Δ>0：y=C₁e^{r₁x}+C₂e^{r₂x}；Δ=0：y=(C₁+C₂x)e^{rx}；Δ<0：y=e^{αx}(C₁cosβx+C₂sinβx)。",
+          "formula": "特征方程 r²+pr+q=0",
+          "keywords": [
+            "特征方程",
+            "特征根",
+            "常系数"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_characteristic_tree"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "多元函数微分学及其应用",
+      "short_name": "多元微分学",
+      "score_range": "约17分",
+      "difficulty": 4,
+      "icon": "multivar",
+      "knowledge_points": [
+        {
+          "id": "M5_K01",
+          "name": "多元函数的概念",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "z=f(x,y)，定义域是平面点集。几何意义：空间曲面。",
+          "formula": "z=f(x,y), (x,y)∈D⊂ℝ²",
+          "keywords": [
+            "多元函数",
+            "二元函数"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_partial_shooter"
+        },
+        {
+          "id": "M5_K02",
+          "name": "偏导数",
+          "category": "method",
+          "difficulty": 3,
+          "description": "∂z/∂x：对x求偏导，y视为常数。求法同一元函数求导。",
+          "formula": "∂z/∂x = lim_{Δx→0}[f(x+Δx,y)-f(x,y)]/Δx",
+          "keywords": [
+            "偏导数",
+            "视为常数"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_partial_shooter"
+        },
+        {
+          "id": "M5_K03",
+          "name": "高阶偏导数",
+          "category": "method",
+          "difficulty": 3,
+          "description": "二阶偏导：∂²z/∂x², ∂²z/∂y², ∂²z/∂x∂y。混合偏导连续则与次序无关。",
+          "formula": "∂²z/∂x∂y = ∂²z/∂y∂x",
+          "keywords": [
+            "高阶偏导",
+            "混合偏导"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_partial_shooter"
+        },
+        {
+          "id": "M5_K04",
+          "name": "全微分",
+          "category": "concept",
+          "difficulty": 3,
+          "description": "dz = (∂z/∂x)dx + (∂z/∂y)dy。必要条件：偏导数存在。充分条件：偏导数连续。",
+          "formula": "dz = (∂z/∂x)dx + (∂z/∂y)dy",
+          "keywords": [
+            "全微分",
+            "可微"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_total_diff_fruit"
+        },
+        {
+          "id": "M5_K05",
+          "name": "多元复合函数求导（链式法则）",
+          "category": "method",
+          "difficulty": 4,
+          "description": "z=f(u,v), u=u(x,y), v=v(x,y)：∂z/∂x = ∂z/∂u·∂u/∂x + ∂z/∂v·∂v/∂x。",
+          "formula": "∂z/∂x = (∂z/∂u)(∂u/∂x) + (∂z/∂v)(∂v/∂x)",
+          "keywords": [
+            "多元链式法则",
+            "树形图"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_chain_vine"
+        },
+        {
+          "id": "M5_K06",
+          "name": "隐函数求偏导",
+          "category": "method",
+          "difficulty": 4,
+          "description": "F(x,y,z)=0确定z=z(x,y)，则∂z/∂x = -F_x/F_z, ∂z/∂y = -F_y/F_z。",
+          "formula": "∂z/∂x = -F_x/F_z, ∂z/∂y = -F_y/F_z",
+          "keywords": [
+            "隐函数偏导",
+            "公式法"
+          ],
+          "exam_frequency": "medium",
+          "plant_ref": "plant_implicit_mushroom"
+        },
+        {
+          "id": "M5_K07",
+          "name": "二元函数的极值",
+          "category": "method",
+          "difficulty": 4,
+          "description": "驻点→求A=f_xx, B=f_xy, C=f_yy。AC-B²>0且A>0极小，A<0极大；<0非极值。",
+          "formula": "AC-B²>0 ⇒ 极值",
+          "keywords": [
+            "极值",
+            "驻点",
+            "AC-B²"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_partial_shooter"
+        },
+        {
+          "id": "M5_K08",
+          "name": "拉格朗日乘数法",
+          "category": "method",
+          "difficulty": 4,
+          "description": "条件极值：L=f+λφ，解L_x=L_y=L_λ=0得可能的极值点。",
+          "formula": "L(x,y,λ)=f(x,y)+λφ(x,y)",
+          "keywords": [
+            "拉格朗日乘数法",
+            "条件极值"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_lagrange_pine"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "二重积分及其应用",
+      "short_name": "二重积分",
+      "score_range": "约12分",
+      "difficulty": 4,
+      "icon": "double_int",
+      "knowledge_points": [
+        {
+          "id": "M6_K01",
+          "name": "二重积分的概念与性质",
+          "category": "concept",
+          "difficulty": 2,
+          "description": "∬_D f(x,y)dσ = lim Σf(ξ_i,η_i)Δσ_i。几何意义：曲顶柱体的体积。",
+          "formula": "∬_D f(x,y)dσ = lim Σf(ξ_i,η_i)Δσ_i",
+          "keywords": [
+            "二重积分",
+            "曲顶柱体",
+            "体积"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_double_flower"
+        },
+        {
+          "id": "M6_K02",
+          "name": "直角坐标系下二重积分计算",
+          "category": "method",
+          "difficulty": 4,
+          "description": "X型：∫_a^b dx∫_{y₁(x)}^{y₂(x)} f dy。Y型：∫_c^d dy∫_{x₁(y)}^{x₂(y)} f dx。",
+          "formula": "X型: ∫_a^b dx∫_{y₁}^{y₂} f dy",
+          "keywords": [
+            "直角坐标",
+            "X型",
+            "Y型"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_double_flower"
+        },
+        {
+          "id": "M6_K03",
+          "name": "交换二次积分的积分次序",
+          "category": "method",
+          "difficulty": 4,
+          "description": "由原积分限画出区域，再按另一种次序重新确定积分限。",
+          "formula": "",
+          "keywords": [
+            "交换次序",
+            "二次积分"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_double_flower"
+        },
+        {
+          "id": "M6_K04",
+          "name": "极坐标系下二重积分计算",
+          "category": "method",
+          "difficulty": 4,
+          "description": "x=rcosθ, y=rsinθ, dσ=rdrdθ。适用于圆域或圆环域。",
+          "formula": "x=rcosθ, y=rsinθ, dσ=rdrdθ",
+          "keywords": [
+            "极坐标",
+            "rdrdθ",
+            "圆域"
+          ],
+          "exam_frequency": "high",
+          "plant_ref": "plant_polar_lotus"
+        }
+      ]
+    }
+  ]
+}

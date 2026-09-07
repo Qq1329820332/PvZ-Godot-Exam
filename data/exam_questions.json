@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "total_questions": 18,
+    "version": "1.0",
+    "last_updated": "2026-09-07",
+    "note": "每模块3题，共18题基础题库，可扩展"
+  },
+  "questions": [
+    {
+      "id": "Q_M1_001",
+      "knowledge_id": "M1_K14",
+      "difficulty": 2,
+      "type": "choice",
+      "question": "计算极限：lim_{x→0} sin(3x)/x = ?",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 3",
+        "D. ∞"
+      ],
+      "answer": "C",
+      "explanation": "利用第一个重要极限：lim_{x→0} sin(3x)/x = lim_{x→0} 3·sin(3x)/(3x) = 3×1 = 3"
+    },
+    {
+      "id": "Q_M1_002",
+      "knowledge_id": "M1_K15",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "计算极限：lim_{x→∞} (1 + 2/x)^x = ?",
+      "options": [
+        "A. 1",
+        "B. e",
+        "C. e²",
+        "D. ∞"
+      ],
+      "answer": "C",
+      "explanation": "利用第二个重要极限：lim_{x→∞} (1+2/x)^x = lim_{x→∞} [(1+2/x)^(x/2)]² = e²"
+    },
+    {
+      "id": "Q_M1_003",
+      "knowledge_id": "M1_K04",
+      "difficulty": 2,
+      "type": "choice",
+      "question": "函数 f(x)=x³ 是（  ）",
+      "options": [
+        "A. 偶函数",
+        "B. 奇函数",
+        "C. 非奇非偶函数",
+        "D. 既是奇函数又是偶函数"
+      ],
+      "answer": "B",
+      "explanation": "f(-x)=(-x)³=-x³=-f(x)，满足奇函数定义"
+    },
+    {
+      "id": "Q_M2_001",
+      "knowledge_id": "M2_K04",
+      "difficulty": 2,
+      "type": "choice",
+      "question": "函数 f(x)=x·e^x 的导数为：",
+      "options": [
+        "A. e^x",
+        "B. x·e^x",
+        "C. (x+1)e^x",
+        "D. x·e^x + e"
+      ],
+      "answer": "C",
+      "explanation": "使用乘积法则：(x·e^x)' = 1·e^x + x·e^x = (x+1)e^x"
+    },
+    {
+      "id": "Q_M2_002",
+      "knowledge_id": "M2_K06",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "函数 y=ln(cos x) 的导数 y' = ?",
+      "options": [
+        "A. -tan x",
+        "B. tan x",
+        "C. -sec x",
+        "D. sec x"
+      ],
+      "answer": "A",
+      "explanation": "链式法则：y' = 1/cos x · (-sin x) = -tan x"
+    },
+    {
+      "id": "Q_M2_003",
+      "knowledge_id": "M2_K13",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "函数 f(x)=x³-3x 的单调递减区间为：",
+      "options": [
+        "A. (-∞, -1)",
+        "B. (-1, 1)",
+        "C. (1, ∞)",
+        "D. (-∞, ∞)"
+      ],
+      "answer": "B",
+      "explanation": "f'(x)=3x²-3=3(x-1)(x+1)。令f'(x)<0得-1<x<1，即递减区间为(-1,1)"
+    },
+    {
+      "id": "Q_M3_001",
+      "knowledge_id": "M3_K02",
+      "difficulty": 2,
+      "type": "choice",
+      "question": "不定积分 ∫2x dx = ?",
+      "options": [
+        "A. x² + C",
+        "B. 2x² + C",
+        "C. x²",
+        "D. 2x + C"
+      ],
+      "answer": "A",
+      "explanation": "∫2x dx = x² + C，C为任意常数"
+    },
+    {
+      "id": "Q_M3_002",
+      "knowledge_id": "M3_K05",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "计算不定积分 ∫ x·e^x dx = ?",
+      "options": [
+        "A. e^x + C",
+        "B. x·e^x - e^x + C",
+        "C. x·e^x + e^x + C",
+        "D. (x-1)e^x + C"
+      ],
+      "answer": "B",
+      "explanation": "分部积分：∫ x·e^x dx = x·e^x - ∫ e^x dx = x·e^x - e^x + C"
+    },
+    {
+      "id": "Q_M3_003",
+      "knowledge_id": "M3_K08",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "定积分 ∫_0^1 2x dx = ?",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 2",
+        "D. 3"
+      ],
+      "answer": "B",
+      "explanation": "牛顿-莱布尼茨：∫_0^1 2x dx = [x²]_0^1 = 1-0 = 1"
+    },
+    {
+      "id": "Q_M4_001",
+      "knowledge_id": "M4_K02",
+      "difficulty": 2,
+      "type": "choice",
+      "question": "微分方程 dy/dx = 2x 的通解为：",
+      "options": [
+        "A. y = x²",
+        "B. y = x² + C",
+        "C. y = 2x + C",
+        "D. y = 2x² + C"
+      ],
+      "answer": "B",
+      "explanation": "分离变量：dy = 2x dx，两边积分得 y = x² + C"
+    },
+    {
+      "id": "Q_M4_002",
+      "knowledge_id": "M4_K04",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "一阶线性方程 y' + y = 0 的通解为：",
+      "options": [
+        "A. y = e^x + C",
+        "B. y = Ce^{-x}",
+        "C. y = Ce^x",
+        "D. y = e^{-x} + C"
+      ],
+      "answer": "B",
+      "explanation": "分离变量：dy/dx = -y，dy/y = -dx，ln|y| = -x + C，y = Ce^{-x}"
+    },
+    {
+      "id": "Q_M4_003",
+      "knowledge_id": "M4_K06",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "微分方程 y'' - 3y' + 2y = 0 的特征方程为：",
+      "options": [
+        "A. r² - 3r + 2 = 0",
+        "B. r² + 3r + 2 = 0",
+        "C. r² - 3r - 2 = 0",
+        "D. r² + 3r - 2 = 0"
+      ],
+      "answer": "A",
+      "explanation": "二阶常系数齐次方程，特征方程为 r² - 3r + 2 = 0"
+    },
+    {
+      "id": "Q_M5_001",
+      "knowledge_id": "M5_K02",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "z = x²y + y³，则 ∂z/∂x = ?",
+      "options": [
+        "A. 2xy + y³",
+        "B. 2xy",
+        "C. x² + 3y²",
+        "D. x²y"
+      ],
+      "answer": "B",
+      "explanation": "对x求偏导，y视为常数：∂z/∂x = 2xy"
+    },
+    {
+      "id": "Q_M5_002",
+      "knowledge_id": "M5_K04",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "z = x²y，则全微分 dz = ?",
+      "options": [
+        "A. 2xy dx + x² dy",
+        "B. 2x dx + y dy",
+        "C. x² dx + 2xy dy",
+        "D. 2xy dx + y² dy"
+      ],
+      "answer": "A",
+      "explanation": "dz = (∂z/∂x)dx + (∂z/∂y)dy = 2xy dx + x² dy"
+    },
+    {
+      "id": "Q_M5_003",
+      "knowledge_id": "M5_K07",
+      "difficulty": 4,
+      "type": "choice",
+      "question": "f(x,y)=x²+y²-2x-4y+5，则驻点为：",
+      "options": [
+        "A. (1,2)",
+        "B. (2,1)",
+        "C. (-1,-2)",
+        "D. (0,0)"
+      ],
+      "answer": "A",
+      "explanation": "f_x=2x-2=0 ⇒ x=1；f_y=2y-4=0 ⇒ y=2。驻点为(1,2)"
+    },
+    {
+      "id": "Q_M6_001",
+      "knowledge_id": "M6_K02",
+      "difficulty": 3,
+      "type": "choice",
+      "question": "二重积分 ∬_D 1 dxdy，其中D为0≤x≤1, 0≤y≤1，其值为：",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 2",
+        "D. 4"
+      ],
+      "answer": "B",
+      "explanation": "∬_D 1 dxdy = ∫_0^1 dx ∫_0^1 dy = ∫_0^1 1 dx = 1"
+    },
+    {
+      "id": "Q_M6_002",
+      "knowledge_id": "M6_K04",
+      "difficulty": 4,
+      "type": "choice",
+      "question": "极坐标下，面积元 dσ = ?",
+      "options": [
+        "A. dr dθ",
+        "B. r dr dθ",
+        "C. r² dr dθ",
+        "D. dr² dθ"
+      ],
+      "answer": "B",
+      "explanation": "极坐标下面积元为 dσ = r dr dθ"
+    },
+    {
+      "id": "Q_M6_003",
+      "knowledge_id": "M6_K03",
+      "difficulty": 4,
+      "type": "choice",
+      "question": "积分 ∫_0^1 dx ∫_0^x f dy 交换次序后为：",
+      "options": [
+        "A. ∫_0^1 dy ∫_0^y f dx",
+        "B. ∫_0^1 dy ∫_y^1 f dx",
+        "C. ∫_0^1 dy ∫_0^1 f dx",
+        "D. ∫_0^x dy ∫_0^1 f dx"
+      ],
+      "answer": "B",
+      "explanation": "原区域：0≤x≤1, 0≤y≤x。交换后：0≤y≤1, y≤x≤1。即∫_0^1 dy ∫_y^1 f dx"
+    }
+  ]
+}
