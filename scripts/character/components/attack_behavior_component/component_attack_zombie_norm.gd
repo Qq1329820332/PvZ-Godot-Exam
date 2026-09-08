@@ -40,7 +40,8 @@ func _physics_process(delta: float) -> void:
 		if not is_instance_valid(detect_component.enemy_can_be_attacked):
 			return
 		if frame_counter==0 and is_instance_valid(detect_component.enemy_can_be_attacked):
-			detect_component.enemy_can_be_attacked.be_zombie_eat(int(curr_attack_value_per_min * delta * 8), owner)
+			var zombie_penalty = KnowledgeEffectManager.get_zombie_penalty_multiplier(owner.zombie_type)
+				detect_component.enemy_can_be_attacked.be_zombie_eat(int(curr_attack_value_per_min * delta * 8 * zombie_penalty), owner)
 
 
 ## 攻击一次发亮，动画调用

@@ -15,6 +15,10 @@ class_name Bullet000NormBase
 var curr_attack_num:=0
 ## 子弹伤害
 @export var attack_value := 20
+## 知识伤害倍率（由KnowledgeEffectManager提供）
+var knowledge_damage_multiplier: float = 1.0
+## 发射该子弹的植物类型（用于查询知识伤害倍率）
+var plant_source_type: int = -1
 ## 子弹默认移动速度
 @export var speed: float = 300.0
 ## 子弹默认移动方向
@@ -137,8 +141,12 @@ func _attack_enemy(enemy:Character000Base):
 
 ## 对僵尸敌人造成伤害,直线类子弹重写
 func _attack_zombie(zombie:Zombie000Base):
+	## 知识伤害倍率加成
+	var final_damage = attack_value
+	if plant_source_type >= 0:
+		final_damage = int(attack_value * knowledge_damage_multiplier)
 	## 攻击敌人
-	zombie.be_attacked_bullet(attack_value, bullet_mode, true, trigger_be_attack_sfx)
+	zombie.be_attacked_bullet(final_damage, bullet_mode, true, trigger_be_attack_sfx)
 
 
 ## 对植物敌人造成伤害

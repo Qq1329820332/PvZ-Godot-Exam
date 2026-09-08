@@ -207,6 +207,11 @@ func get_field_module_ids() -> Array[int]:
 	return field_module_ids.duplicate()
 
 
+## 获取场上植物列表
+func get_field_plants() -> Array:
+	return field_plants.duplicate()
+
+
 ## 获取场上植物数量
 func get_field_plant_count() -> int:
 	return field_plants.size()

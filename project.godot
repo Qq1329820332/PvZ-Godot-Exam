@@ -30,6 +30,7 @@ GlobalUtils="*res://scripts/autoload/util/global_utils.gd"
 EventBus="*res://scripts/autoload/event_bus.gd"
 TreePauseManager="*res://scripts/autoload/tree_pause_manager.gd"
 ExamManager="*res://scripts/exam/exam_manager.gd"`r`nPlantKnowledgeBinder="*res://scripts/exam/plant_knowledge_binder.gd"
+KnowledgeEffectManager="*res://scripts/exam/knowledge_effect_manager.gd"
 
 [display]
 

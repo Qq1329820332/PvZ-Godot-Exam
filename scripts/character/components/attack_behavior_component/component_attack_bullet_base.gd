@@ -93,6 +93,10 @@ func _shoot_bullet():
 	signal_shoot_bullet.emit()
 	for i in range(markers_2d_bullet.size()):
 		var bullet:Bullet000Base = Global.bullet_registry.get_bullet_scenes(attack_bullet_type).instantiate()
+		## 设置植物来源类型（用于知识伤害倍率）
+		if bullet is Bullet000NormBase and owner is Plant000Base:
+			bullet.plant_source_type = owner.plant_type
+			bullet.knowledge_damage_multiplier = KnowledgeEffectManager.get_damage_multiplier(owner.plant_type)
 		var bullet_paras = get_bullet_paras(markers_2d_bullet[i].global_position, detect_component.ray_area_direction[i])
 		#print(bullet_paras)
 		bullet.init_bullet(bullet_paras)
